@@ -24,7 +24,7 @@ function updateCart(pizza) {
             progressBar: false,
             text: 'Somthing went wrong'
         }).show();
-    })
+       })
 }
 
 addToCart.forEach((btn) => {
