@@ -14,7 +14,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@stripe/stripe-js": "^1.19.0",
     "axios": "^0.21.1",
     "bcrypt": "^5.0.1",
     "connect-mongo": "^4.4.1",
@@ -30,7 +31,9 @@
     "noty": "^3.2.0-beta-deprecated",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "socket.io": "^4.2.0"
+    "react-toastify": "^8.0.3",
+    "socket.io": "^4.2.0",
+    "stripe": "^8.178.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
