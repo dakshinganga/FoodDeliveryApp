@@ -4,7 +4,7 @@ const app = express()
 const path = require('path')
 const ejs = require('ejs')
 const expressLayout = require("express-ejs-layouts")
-const PORT = process.env.PORT || 31000
+const PORT = process.env.PORT || 35000
 const mongoose = require('mongoose')
 const session = require('express-session')
 const flash = require('express-flash')
@@ -13,8 +13,8 @@ const passport = require('passport')
 const Emitter = require('events')
 
 //Database connection
-const url = 'mongodb://localhost/pizza';
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true, useCreateIndex: true });
+//const url = 'mongodb://localhost/pizza';
+mongoose.connect(process.env.MONGO_CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true, useCreateIndex: true });
 
 const connection = mongoose.connection;
 connection.once('open', () => {
@@ -31,7 +31,7 @@ app.set('eventEmitter',eventEmitter)
 app.use(session({
     secret: process.env.COOKIE_SECRET,
     resave: false,
-    store: MongoStore.create({ mongoUrl: url }),
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_CONNECTION_URL }),
     saveUninitialized: false,
     cookie: { maxAge: 1000 * 60 * 60 * 24 } //24 hours
 }))
@@ -64,6 +64,7 @@ app.set('views', path.join(__dirname, '/resources/views'))
 app.set('view engine', 'ejs')
 
 require('./routes/web')(app)
+
 app.use((req, res) => {
     res.status(404).render('errors/404')
 })

@@ -2235,10 +2235,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var addToCart = document.querySelectorAll('.add-to-cart');
 var cartCounter = document.querySelector('#cartCounter');
+var deleteCartItem = document.querySelectorAll('.deleteCartItem');
+var sub = document.querySelectorAll('.sub');
+var add = document.querySelectorAll('.add');
 
 function updateCart(pizza) {
   axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update-cart', pizza).then(function (res) {
-    console.log(res);
+    //console.log(res)
     cartCounter.innerText = res.data.totalQty;
     new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
       type: 'success',
@@ -2259,9 +2262,91 @@ function updateCart(pizza) {
 addToCart.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
     //console.log(e)
-    var pizza = JSON.parse(btn.dataset.pizza);
-    console.log(pizza);
+    var pizza = JSON.parse(btn.dataset.pizza); //console.log(pizza)
+
     updateCart(pizza);
+  });
+});
+
+function deleteItem(pizzaid) {
+  axios__WEBPACK_IMPORTED_MODULE_0___default().post('/delete-item', pizzaid).then(function (res) {
+    console.log(res);
+    cartCounter.innerText = res.data.totalQty;
+    new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
+      type: 'warning',
+      timeout: 2000,
+      progressBar: false,
+      text: 'Item deleted from cart'
+    }).show();
+  })["catch"](function (err) {
+    new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
+      type: 'error',
+      timeout: 1000,
+      progressBar: false,
+      text: 'Somthing went wrong'
+    }).show();
+  });
+} //Deleting item from cart
+
+
+deleteCartItem.forEach(function (bt) {
+  bt.addEventListener('click', function (e) {
+    var pizzaid = JSON.parse(bt.dataset.pizzaid);
+    deleteItem(pizzaid); //console.log(pizzaid); 
+  });
+}); //Items increasing and decreasing
+
+function decrease(sub) {
+  axios__WEBPACK_IMPORTED_MODULE_0___default().post('/subtraction', sub).then(function (res) {
+    console.log(res);
+    cartCounter.innerText = res.data.totalQty;
+    new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
+      type: 'information',
+      timeout: 2000,
+      progressBar: false,
+      text: 'Item decreases from cart'
+    }).show();
+  })["catch"](function (err) {
+    new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
+      type: 'error',
+      timeout: 1000,
+      progressBar: false,
+      text: 'Somthing went wrong'
+    }).show();
+  });
+}
+
+sub.forEach(function (bt1) {
+  bt1.addEventListener('click', function (e) {
+    var sub = JSON.parse(bt1.dataset.sub);
+    decrease(sub); //console.log(sub); 
+  });
+});
+
+function increase(add) {
+  axios__WEBPACK_IMPORTED_MODULE_0___default().post('/addition', add).then(function (res) {
+    console.log(res);
+    cartCounter.innerText = res.data.totalQty;
+    new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
+      type: 'information',
+      timeout: 2000,
+      progressBar: false,
+      text: 'Item increases from cart'
+    }).show();
+  })["catch"](function (err) {
+    new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
+      type: 'error',
+      timeout: 1000,
+      progressBar: false,
+      text: 'Somthing went wrong'
+    }).show();
+  });
+}
+
+add.forEach(function (bt2) {
+  bt2.addEventListener('click', function (e) {
+    var add = JSON.parse(bt2.dataset.add);
+    increase(add); //console.log(add); 
   });
 }); // Remove alert message after X seconds
 
@@ -2479,7 +2564,7 @@ function _initStrip() {
 
                         case 10:
                           token = _context.sent;
-                          formObject.stripeToken = token.id;
+                          formObject.stripeToken = token._id;
                           (0,_apiService__WEBPACK_IMPORTED_MODULE_2__.placeOrder)(formObject); //verify card
 
                           /* stripe.createToken(card).then((result)=>{

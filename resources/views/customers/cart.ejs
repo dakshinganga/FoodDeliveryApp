@@ -8,7 +8,7 @@
             <div class="pizza-list">
                 <% for(let pizza of Object.values(session.cart.items)) { %>
                     <div class="flex items-center my-8">
-                        <img class="w-24" src="/img/<%= pizza.item.image %>" alt="">
+                        <img class="w-24" src="/img/dish/<%= pizza.item.image %>" alt="">
                         <div class="flex-1 ml-4">
                             <h1>
                                 <%= pizza.item.name %>
@@ -17,10 +17,15 @@
                                 <%= pizza.item.size %>
                             </span>
                         </div>
+                       <div class="mr-10 ">
+                        <a href="/cart"><button data-sub="<%= JSON.stringify(pizza.item)%>" class="sub px-5 py-1 rounded-full text-white text-xl font-bold " > - </button></a>
                         <span class="flex-1">
                             <%= pizza.qty%> Pcs
                         </span>
-                        <span class="font-bold text-lg">$<%= pizza.item.price * pizza.qty %></span>
+                        <a href="/cart"><button data-add="<%= JSON.stringify(pizza.item)%>" class="add mr-2 px-5 py-1 rounded-full text-white text-xl font-bold" > + </button></a>
+                       </div>
+                        <span class=" font-bold text-lg">₹<%= pizza.item.price * pizza.qty %></span>
+                        <a href="/cart"><button data-pizzaid="<%= JSON.stringify(pizza.item)%>" class="deleteCartItem ml-12 btn-primary px-6 py-2 rounded-full text-white font-bold" >Delete</button></a>
                     </div>
                     <% } %>
             </div>
@@ -28,7 +33,7 @@
             <div class="text-right py-4">
                 <div>
                     <span class="text-lg font-bold">Total Amount:</span>
-                    <span class="amount text-2xl font-bold ml-2">$<%= session.cart.totalPrice%></span>
+                    <span class="amount text-2xl font-bold ml-2">₹<%= session.cart.totalPrice%></span>
                 </div>
 
                 <% if(user) { %>
@@ -51,9 +56,9 @@
                                     </svg>
                                 </div>
                             </div>
-                            <input name="phone" class="border border-gray-400 p-2 w-1/2 mb-4" type="text"
+                            <input name="phone" class="border border-green-500 p-2 w-1/2 mb-4" type="text"
                                 placeholder="Phone number">
-                            <input name="address" class="border border-gray-400 p-2 w-1/2" type="text"
+                            <input name="address" class="border border-green-500 p-2 w-1/2" type="text"
                                 placeholder="Address">
                             <div class ="mt-4">
                             <div id="card-element"></div>

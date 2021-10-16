@@ -6,18 +6,18 @@
             <button class="btn-primary px-6 py-2 rounded-full text-white font-bold mt-4">Order Now</button>
         </div>
         <div class="w-1/2">
-            <img src="/img/hero-pizza.png" alt="">
+            <img src="/img/dish/Berger.png" alt="">
         </div>
     </div>
 </section>
 <section class="menu container mx-auto py-8">
-    <h1 class="text-xl font-bold mb-8">All Pizzas</h1>
+    <h1 class="text-xl font-bold mb-8">All Foods Here</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 row-gap-16">
         <% pizzas.forEach(function(pizza){ %>
             <div class="w-full md:w-64">
-                <img class="h-40 mb-4 mx-auto" src="/img/<%= pizza.image %>" alt="">
+                <img class=" h-40 mb-4 mx-auto" src="/img/dish/<%= pizza.image %>" alt="">
                 <div class="text-center">
-                    <h2 class="mb-4 text-lg">
+                    <h2 class="mb-4 text-lg ">
                         <%= pizza.name %>
                     </h2>
                     <span class="size py-1 px-4 rounded-full uppercase text-xs">

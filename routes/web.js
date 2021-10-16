@@ -24,6 +24,9 @@ function initRoutes(app)
     app.post('/logout',authController().logout)
 
     app.post('/update-cart',cartController().update)
+    app.post('/delete-item',cartController().delete)
+    app.post('/addition',cartController().increase)
+    app.post('/subtraction',cartController().decrease)
 
     //Customer routes
     app.post('/orders',auth,orderController().store)
