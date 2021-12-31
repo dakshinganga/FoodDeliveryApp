@@ -2,31 +2,31 @@
   "_id": {
     "$oid": "5eee651f739f8c674fd736ee"
   },
-  "name": "Margherita",
-  "image": "pizza.png",
-  "price": "250",
+  "name": "Black Tea",
+  "image": "blacktea.png",
+  "price": "30",
   "size": "small"
 },{
   "_id": {
     "$oid": "5eee6671a27a66807cf2bea3"
   },
-  "name": "Marinara",
-  "image": "pizza.png",
-  "price": "300",
+  "name": "Ceviche Peru",
+  "image": "CevichePeruSeafood.png",
+  "price": "200",
   "size": "medium"
 },{
   "_id": {
     "$oid": "5eee6692a27a66807cf2bea4"
   },
-  "name": "Carbonara",
-  "image": "pizza.png",
-  "price": "200",
+  "name": "CupCake",
+  "image": "cupcake.png",
+  "price": "150",
   "size": "small"
 },{
   "_id": {
     "$oid": "5eee66a5a27a66807cf2bea5"
   },
-  "name": "Americana",
+  "name": "Americana Pizza",
   "image": "pizza.png",
   "price": "500",
   "size": "large"
@@ -34,32 +34,177 @@
   "_id": {
     "$oid": "5eee66c4a27a66807cf2bea6"
   },
-  "name": "Chicken Mushroom",
-  "image": "pizza.png",
-  "price": "350",
+  "name": "Berger",
+  "image": "dish-1.png",
+  "price": "300",
   "size": "medium"
 },{
   "_id": {
     "$oid": "5eee66cfa27a66807cf2bea7"
   },
   "name": "Paneer pizza",
-  "image": "pizza.png",
-  "price": "200",
-  "size": "small"
+  "image": "dish-4.png",
+  "price": "400",
+  "size": "large"
 },{
   "_id": {
     "$oid": "5eee66eea27a66807cf2bea8"
   },
-  "name": "Vegies pizza",
-  "image": "pizza.png",
-  "price": "600",
+  "name": "Black",
+  "image": "dish-2.png",
+  "price": "40",
   "size": "large"
 },{
   "_id": {
     "$oid": "5eee6717a27a66807cf2bea9"
   },
   "name": "Pepperoni",
-  "image": "pizza.png",
+  "image": "dish-3.png",
   "price": "500",
   "size": "medium"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beaa1"
+  },
+  "name": "Black",
+  "image": "dish-5.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beaa2"
+  },
+  "name": "Black",
+  "image": "dish-6.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beaa3"
+  },
+  "name": "Black",
+  "image": "dish-7.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beaa4"
+  },
+  "name": "Black",
+  "image": "dish-8.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beaa5"
+  },
+  "name": "Black",
+  "image": "dish-9.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beaa6"
+  },
+  "name": "Black",
+  "image": "dish-10.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beaa7"
+  },
+  "name": "Black",
+  "image": "dish-11.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beaa8"
+  },
+  "name": "Black",
+  "image": "dish-12.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beaa9"
+  },
+  "name": "Donuts",
+  "image": "donut.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beab1"
+  },
+  "name": "Koconut Grove",
+  "image": "koconutgrove.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beab2"
+  },
+  "name": "Veg Momo",
+  "image": "momo.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beab3"
+  },
+  "name": "Black",
+  "image": "plate-1.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beab4"
+  },
+  "name": "Black",
+  "image": "plate-2.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beab5"
+  },
+  "name": "Black",
+  "image": "plate-3.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beab6"
+  },
+  "name": "Rasberry",
+  "image": "rasberry.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beab7"
+  },
+  "name": "Straw",
+  "image": "straw.png",
+  "price": "40",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beab8"
+  },
+  "name": "Yogurt",
+  "image": "yogurt.png",
+  "price": "40",
+  "size": "large"
+},
+{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2beab9"
+  },
+  "name": "Vegies",
+  "image": "vegies.png",
+  "price": "40",
+  "size": "large"
 }]

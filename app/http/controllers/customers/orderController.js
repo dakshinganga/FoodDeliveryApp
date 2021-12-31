@@ -10,6 +10,7 @@ function orderController() {
             //Validate request
             const { phone, address, stripeToken, paymentType } = req.body
             if (!phone || !address) {
+
                 return res.status(422).json({ message: 'All fields are required' })
                 //req.flash('error', 'All fields are required ')
                 //return res.redirect('/cart')

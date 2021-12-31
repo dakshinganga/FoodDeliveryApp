@@ -4,7 +4,7 @@ const app = express()
 const path = require('path')
 const ejs = require('ejs')
 const expressLayout = require("express-ejs-layouts")
-const PORT = process.env.PORT || 35000
+const PORT = process.env.PORT || 4000
 const mongoose = require('mongoose')
 const session = require('express-session')
 const flash = require('express-flash')
@@ -33,7 +33,7 @@ app.use(session({
     resave: false,
     store: MongoStore.create({ mongoUrl: process.env.MONGO_CONNECTION_URL }),
     saveUninitialized: false,
-    cookie: { maxAge: 1000 * 60 * 60 * 24 } //24 hours
+    cookie: { maxAge: 1000 * 60 * 60 * 24} //24 hours
 }))
 
 //Passport config
